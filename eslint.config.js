@@ -5,15 +5,19 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs}"],
-    plugins: { js },
-    extends: ["js/recommended"],
+    plugins: { js, prettier },
+    extends: ["js/recommended", "prettier"],
     languageOptions: { globals: globals.node },
     rules: {
+      "prettier/prettier": "error",
       "no-param-reassign": "off",
-      "camelcase": "off",
-      "no-unsuded-vars": ["error", {
-        argsIgnorePattern: "next",
-      }]
+      camelcase: "off",
+      "no-unsuded-vars": [
+        "error",
+        {
+          argsIgnorePattern: "next",
+        },
+      ],
     },
   },
 ]);
