@@ -11,9 +11,12 @@ export default defineConfig([
     languageOptions: { globals: globals.node },
     rules: {
       'no-param-reassign': 'off',
-      'no-console': ['error', {
-        allow: ['warn', 'error']
-      }],
+      'no-console': [
+        'error',
+        {
+          allow: ['warn', 'error'],
+        },
+      ],
       camelcase: 'off',
       'no-unused-vars': [
         'error',
